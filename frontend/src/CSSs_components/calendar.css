@@ -1,0 +1,62 @@
+/* =====================
+   Calendar Base Styles
+===================== */
+.react-calendar {
+  background-color: whitesmoke;
+  border: none; /* removes default border */
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* =====================
+   Tile Styles
+===================== */
+.react-calendar__tile {
+  border-radius: 6px;          /* rounded corners for all tiles */
+  font-weight: 500;
+  color:darkslategray;
+}
+
+/* Hover effect for all tiles */
+.react-calendar__tile:hover {
+  background-color: #e0f0ff;  /* light blue hover for all tiles */
+}
+
+/* =====================
+   Today Tile
+===================== */
+.react-calendar__tile--now {
+  background-color: whitesmoke;
+  color: black;                  /* text color for today */
+  border-radius: 20%;            /* optional: circle */
+  box-shadow: 0 2px 5px lightslategray;
+}
+
+/* Remove hover effect for today */
+.react-calendar__tile--now:hover {
+  background-color: lightgrey !important;
+}
+
+/* =====================
+   Active Tile (selected date)
+===================== */
+.react-calendar__tile--active {
+  background-color: transparent !important; /* remove selected styling */
+  color: black;
+}
+
+/* Active tile that is also today */
+.react-calendar__tile--active.react-calendar__tile--now {
+  background-color: lightgrey;  /* different color if today is selected */
+  color: crimson;
+  font-weight: bold;
+}
+
+
+/* Remove browser default focus on tiles */
+.react-calendar__tile:focus {
+  outline: none;          /* removes the blue outline */
+  box-shadow: none;       /* removes any shadow highlight */
+}
