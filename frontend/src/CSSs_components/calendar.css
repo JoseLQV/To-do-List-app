@@ -1,69 +1,61 @@
- .calendar-container {
-  width: 300px;                /* adjust size as needed */
+.calendar-container {
+  width: 100%;
+  max-width: 100%;
   padding: 10px;
-  background-color: lightcoral;
-  margin-left: auto;           /* pushes container to the right */
+  margin: 5px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;  /* keeps container square */
 }
 
-/* =====================
-   Calendar Base Styles
-===================== */
 .react-calendar {
+  width: 100%;
+  height: 100%;
   background-color: whitesmoke;
-  border: none; /* removes default border */
+  border: none;
   border-radius: 30px;
-  padding: 10px;
+  padding: 1%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  
+  box-sizing: border-box;
+  transform-origin: top left;
 }
 
-/* =====================
-   Tile Styles
-===================== */
 .react-calendar__tile {
-  border-radius: 6px;          /* rounded corners for all tiles */
-  font-weight: 500;
-  color:darkslategray;
+  transform: scale(0.8);  /* scale tiles proportionally */
+  padding: 0.5em;
+  font-size: 1vw;         /* responsive text size */
+  border-radius: 0.3em;
+  color: darkslategray;
 }
 
-/* Hover effect for all tiles */
 .react-calendar__tile:hover {
-  background-color: #e0f0ff;  /* light blue hover for all tiles */
+  background-color: #e0f0ff;
 }
 
-/* =====================
-   Today Tile
-===================== */
 .react-calendar__tile--now {
   background-color: whitesmoke;
-  color: black;                  /* text color for today */
-  border-radius: 20%;            /* optional: circle */
+  color: black;
+  border-radius: 20%;
   box-shadow: 0 2px 5px lightslategray;
 }
 
-/* Remove hover effect for today */
 .react-calendar__tile--now:hover {
   background-color: lightgrey !important;
 }
 
-/* =====================
-   Active Tile (selected date)
-===================== */
 .react-calendar__tile--active {
-  background-color: transparent !important; /* remove selected styling */
+  background-color: transparent !important;
   color: black;
 }
 
-/* Active tile that is also today */
 .react-calendar__tile--active.react-calendar__tile--now {
-  background-color: lightgrey;  /* different color if today is selected */
+  background-color: lightgrey;
   color: crimson;
   font-weight: bold;
 }
 
-
-/* Remove browser default focus on tiles */
 .react-calendar__tile:focus {
-  outline: none;          /* removes the blue outline */
-  box-shadow: none;       /* removes any shadow highlight */
+  outline: none;
+  box-shadow: none;
 }
