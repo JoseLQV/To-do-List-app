@@ -7,8 +7,8 @@ function CalendarWidget() {
   const [date, setDate] = useState(new Date());
 
   return (
-    <div style={{ position: 'absolute', top: '20px', right: '20px' }}>
-      <Calendar onChange={setDate} onClickDay={() => null}  value={date} />
+    <div className="calendar-container">
+      <Calendar onChange={setDate} onClickDay={() => null} value={date} />
     </div>
   );
 }

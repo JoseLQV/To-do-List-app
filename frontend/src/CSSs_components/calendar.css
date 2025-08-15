@@ -1,3 +1,10 @@
+ .calendar-container {
+  width: 300px;                /* adjust size as needed */
+  padding: 10px;
+  background-color: lightcoral;
+  margin-left: auto;           /* pushes container to the right */
+}
+
 /* =====================
    Calendar Base Styles
 ===================== */
