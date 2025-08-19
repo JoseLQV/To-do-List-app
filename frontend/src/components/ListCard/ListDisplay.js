@@ -1,5 +1,6 @@
 import React from "react";
 import "./ListDisplay.css"
+import ChatInput from "../Chat_Input/Chat_Input";
 
 export default function ListDisplay() {
   return (

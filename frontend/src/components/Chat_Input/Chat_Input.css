@@ -1,49 +1,44 @@
-.chat-input-container{
-    justify-content: center;
-    display:flex;
-    background-color:  #4A4A4A;
-    color: #4A4A4A;
-
-    width: auto;
-    margin-left: 15%;
-    margin-right: 15%;
-    height:auto;
-    padding: .5%;
-    border: 1px solid #ccc;
-    border-radius: 25vh;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-    bottom: 0;
-    align-items: center; /* vertically center content */
+.chat-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #4A4A4A;
+  border-radius: 25vh;
+  padding: .5vh 1vh;
+  margin-left: 15%;
+  margin-right: 15%;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Textarea inside container */
 .chat-input-field {
-    margin:1%;
-    flex: 1;              /* takes remaining width */
-    min-height: 30px;      /* ensures minimum height */
-    max-height: 150px;     /* prevents overgrowth */
-    resize: none;
-    border: none;
-    border-radius: 25vh;  /* match container for round look */
-    padding: 4px 12px;
-    font-size: 16px;
-    outline: none;
-    background-color: #F7F7F7;
-    max-height: 150px;
+  flex: 1;
+  border: none;
+  background-color: #f7f7f7;
+  resize: none;
+  outline: none;
+  font-size: 2vh;
+  border-radius: 25vh;
+  padding: 15px 40px 6px 12px; 
+  min-height: 30px;
+  max-height: 150px;
 }
 
-/* Send button */
 .chat-send-button {
-    margin-left: 8px;
-    padding: 6px 12px;
-    background-color: lightsalmon; /* ChatGPT-style green */
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
+  position: absolute;
+  right: 3vh;
+  background-color: lightsalmon;
+  color: white;
+  border: none;
+  border-radius: 1.5vh;
+  width: 5%;
+  height: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .chat-send-button:hover {
-    background-color: lightgray;
-    color:#4A4A4A
+  background-color: lightgray;
+  color: #4A4A4A;
 }

@@ -7,21 +7,22 @@ export default function ChatInput() {
 
 useEffect(() => {
   const ta = textareaRef.current;
-  if (!ta) return; // stop if ref is null
+  if (!ta) return; 
   ta.style.height = "auto"; 
-  ta.style.height = Math.max(ta.scrollHeight, 30) + "px"; // min 30px
+  ta.style.height = Math.max(ta.scrollHeight, 30) + "px"; 
 }, [message]);
 
 
 const handleSend = () => {
-  if (!message.trim()) return; // nothing happens
+  if (!message.trim()) return; 
   console.log("Message:", message);
-  setMessage(""); // resets textarea safely
+  setMessage("");
 };
 
 
   return (
     <div className="chat-input-container">
+
       <textarea
         ref={textareaRef}
         className="chat-input-field"
